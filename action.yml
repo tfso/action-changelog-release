@@ -1,0 +1,12 @@
+name: 'Release Changelog'
+description: 'Creates changelog notes and adds them to a new GitHub Release based on tag'
+inputs:
+  version:
+    description: 'Version of the image to upgrade to. Will use tag value if exists and none is entered'
+    required: false
+outputs:
+  release_type:
+    description: Whether its a release or a rollback
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
