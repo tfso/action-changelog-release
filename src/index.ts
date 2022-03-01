@@ -9,9 +9,8 @@ const repo = context.payload.repository.name;
 
 const run = async () => {
   console.log("Starting release changelog");
-  const version =
-    core.getInput("version") || context.ref.replace("refs/tags/", "");
-  const githubApiKey = process.env.GITHUB_TOKEN;
+  const version = core.getInput("version") || context.ref.replace("refs/tags/", "");
+  const githubApiKey = core.getInput("GITHUB_TOKEN");
 
   const octokit = getOctokit(githubApiKey);
 

@@ -1,6 +1,9 @@
 name: 'Release Changelog'
 description: 'Creates changelog notes and adds them to a new GitHub Release based on tag'
 inputs:
+  GITHUB_TOKEN:
+    description: 'Access token to current github repository'
+    required: true
   version:
     description: 'Version of the image to upgrade to. Will use tag value if exists and none is entered'
     required: false
